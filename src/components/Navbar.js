@@ -3,9 +3,9 @@ import Logo from "../assets/images/logo.png";
 import { cart } from "../Data";
 
 const Navbar = () => {
-  const navbarRef = useRef();
-  const searchRef = useRef();
-  const cartRef = useRef();
+  const navbarRef = useRef(); // reffrance leva  mate// // ahi aapde navbarRef refrance lidho and console ma teg maido //  
+  const searchRef = useRef(); // reffrance leva  mate// // ahi aapde navbarRef refrance lidho and console ma teg maido // 
+  const cartRef = useRef(); // reffrance leva  mate// // ahi aapde navbarRef refrance lidho and console ma teg maido // 
   const navbarHandler = () => {
     navbarRef.current.classList.toggle("active");
     searchRef.current.classList.remove("active");
@@ -30,6 +30,7 @@ const Navbar = () => {
           <img src={Logo} alt="" />
         </a>
         <nav className="navbar" ref={navbarRef}>
+        {/* //react ma koi pn teg joiae to aapde reffrace kai skisu (useRef)  */}
           <a href="#home">home</a>
           <a href="#about">about</a>
           <a href="#menu">menu</a>
@@ -39,21 +40,9 @@ const Navbar = () => {
           <a href="#blogs">blogs</a>
         </nav>
         <div className="icons">
-          <div
-            className="fas fa-search"
-            id="search-btn"
-            onClick={searchHandler}
-          ></div>
-          <div
-            className="fas fa-shopping-cart"
-            id="cart-btn"
-            onClick={cartHandler}
-          ></div>
-          <div
-            className="fas fa-bars"
-            id="menu-btn"
-            onClick={navbarHandler}
-          ></div>
+          <div className="fas fa-search" id="search-btn" onClick={searchHandler}></div>
+          <div className="fas fa-shopping-cart" id="cart-btn" onClick={cartHandler}></div>
+          <div className="fas fa-bars"id="menu-btn" onClick={navbarHandler}></div>
         </div>
         <div className="search-form" ref={searchRef}>
           <input type="search" id="search-box" placeholder="search here..." />
